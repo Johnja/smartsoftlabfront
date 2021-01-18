@@ -1,0 +1,25 @@
+<aside class="left-sidebar">
+    <div class="scroll-sidebar">
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <div class="sidebar-title">
+                   <span class="hide-menu">Menu</span>
+                </div>
+                <li *ngFor="let item of menuItems">
+                    <a class="waves-effect text-center" aria-expanded="false" href="#">
+                        <i class="mdi mdi-folder"></i>
+                        <span class="hide-menu">{{item.titulo}}
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-logout">
+            <a class="waves-effect" aria-expanded="false" (click)="logOut()">
+                <i class="mdi mdi-logout-variant"></i>
+                <span class="hide-menu">Cerrar Sesión
+                </span>
+            </a>
+        </div>
+    </div>
+</aside>
