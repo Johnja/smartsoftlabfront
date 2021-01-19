@@ -7,6 +7,8 @@ import { AuthGuard } from '../guards/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { OtpComponent } from './otp/otp.component';
 
+//Rutas del modulo auth
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'otp', component: OtpComponent,},

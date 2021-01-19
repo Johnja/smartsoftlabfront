@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class SideBarService {
 
+  //Servicio para obetner el Menu del Sidebar
+  
   menu: any[] = [
     
         { titulo: 'Opción 1', url: '/'},

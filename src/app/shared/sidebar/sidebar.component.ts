@@ -23,6 +23,8 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Metodo Logout 
+  
   logOut(){
     this.loginService.logOut();
     this.router.navigateByUrl('/login');

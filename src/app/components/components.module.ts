@@ -10,6 +10,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
 
 //Components
 import { TableSearchComponent } from './table-search/table-search.component';
@@ -29,7 +31,9 @@ import { TableSearchComponent } from './table-search/table-search.component';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRippleModule
+    MatRippleModule,
+    MatSelectModule,
+    MatDialogModule
   ], 
   exports: [
     TableSearchComponent,

@@ -16,6 +16,8 @@ export class OtpComponent implements OnInit {
 
   public tokenServer: string = "";
 
+  //Input del Form para obtener el token ingresado por el usuario
+
   public otpForm = new FormGroup({
     token: new FormControl('', [Validators.required]),
   });
@@ -27,13 +29,16 @@ export class OtpComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Función que activa servicio para validar el token para activiar el admin guard
+  
   validateToken() {
 
     if (this.otpForm.invalid) {
       Swal.fire('Error', "Ingrese su token", 'error');
       return;
     } else {
-      if (this.tokenServer === this.otpForm.get('token').value) {
+   
+      if ( this.loginService.validateTokenServer()){
         this.router.navigateByUrl('/');
       } else {
         Swal.fire('Error', "Verifique su token", 'error');

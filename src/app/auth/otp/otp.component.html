@@ -12,14 +12,14 @@
         <div class="row col-12 ml-0 mr-0 pl-0 pr-0">
             <div class="col-lg-3 col-md-2 col-sm-2 col-1">
             </div>
-            <div class="col-lg-6 col-md-8 col-sm-10 col-10 pl-0 pr-0">
+            <div class="col-lg-6 col-md-8 col-sm-8 col-10 pl-0 pr-0">
                 <div class="otp-box card">
                     <div class="card-body ml-3 mr-3">
                         <div class=" text-center mb-4">
                             <img src="../../../assets/images/Escudo.svg" class="img-fluid" width="55.07px"
                                 height="65.07" alt="Logo_Coink">
                         </div>
-                        <form class="form-horizontal form-material" [formGroup]="otpForm" (onSubmit)="validateToken()">
+                        <form class="form-horizontal form-material" [formGroup]="otpForm" (submit)="validateToken()">
                             <h3 class="box-title m-t-20 m-b-20">INGRESO SEGURO</h3>
                             <div class="opt-msg-verify m-b-10">
                                 Un código de verificación fue enviado a tu correo, por favor introdúcelo.

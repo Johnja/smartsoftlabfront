@@ -6,7 +6,6 @@ import { tap, map } from 'rxjs/operators';
 //Services
 import { LoginService } from '../services/login.service';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,21 +15,28 @@ export class AuthGuard implements CanActivate {
 
   }
 
+  //Función CanActive para activar el route a las paginas si se esta loggeado
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-    this.loginService.validateToken().subscribe(resp => {
+
+    //Observable pata activar la funcion validar token
+
+    this.loginService.validateTokenServer().subscribe(resp => {
 
     })
 
-    return this.loginService.validateToken().pipe(
+    //Si usuario no esta loggeado con token activo dirige a logout
+    
+    return this.loginService.validateTokenServer().pipe(
       tap(isAuthenticated => {
         if (!isAuthenticated) {
           this.router.navigateByUrl('/login');
         }
       })
-    );
+    )
   }
   
 }

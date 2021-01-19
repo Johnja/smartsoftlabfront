@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 
+//Rute del modulo
+
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
  

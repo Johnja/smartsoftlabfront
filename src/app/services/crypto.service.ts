@@ -15,12 +15,16 @@ export class CryptoService {
     padding: pad.Pkcs7
   };
 
+  //Metodo para envcryptar los datos
+
   encrypt(message: string): string {
     const toEncryptArray = enc.Utf8.parse(message.toString());
     const payload = AES.encrypt(toEncryptArray, this.getKey(), CryptoService.CONFIG);
     return payload.ciphertext.toString(enc.Base64);
   }
 
+  //Metodo para desencriar los datos
+  
   decrypt(message: string): string {
 
     var toEncryptArray = enc.Base64.parse(message);
