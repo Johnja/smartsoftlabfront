@@ -3,40 +3,29 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Modules
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule} from '@angular/material/sort';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatDialogModule } from '@angular/material/dialog';
 
 //Components
-import { TableSearchComponent } from './table-search/table-search.component';
+import { ListRestaurantsComponent } from './list-restaurants/list-restaurants.component';
+import { ManageRestaurantComponent } from './manage-restaurant/manage-restaurant.component';
+
 
 @NgModule({
   declarations: [
-    TableSearchComponent
+  ListRestaurantsComponent,
+  ManageRestaurantComponent
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatDialogModule
+
   ], 
   exports: [
-    TableSearchComponent,
+    ListRestaurantsComponent,
+    ManageRestaurantComponent
   ]
 })
 export class ComponentsModule { }

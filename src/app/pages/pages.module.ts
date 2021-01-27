@@ -8,15 +8,14 @@ import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
 
 
-//import { PagesRoutingModule } from './pages-routing.module';
+//Components
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
 
 @NgModule({
   declarations: [
     PagesComponent, 
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -24,7 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SharedModule,
     RouterModule,
     ComponentsModule,
-    //PagesRoutingModule
+
   ], 
   exports: [
     DashboardComponent,

@@ -1,5 +1,19 @@
-<div class="row">
-    <div class="col-12">
-        <app-table-search></app-table-search>
+<div class="container content">
+    <div class="d-flex justify-content-center">
+        <div class="card-default">
+            <div class="card-header">
+                <h3 class="mb-0">Crear Restaurante</h3>
+            </div>
+            <div class="card-body">
+                <app-manage-restaurant (onItemAdded)="atached($event)"></app-manage-restaurant>
+            </div>
+        </div>
     </div>
+    <hr class="mb-5">
+    <h2 class="title-list">LISTADO RESTAURANTES</h2>
+    <div class="row">
+        <app-list-restaurants class="col-lg-4 col-md-6 col-sm-12 col-12" *ngFor="let item of restaurants"
+            [name]="item.name" [description]="item.description" [city]="item.city"></app-list-restaurants>
+    </div>
+    <hr class="mb-5">
 </div>

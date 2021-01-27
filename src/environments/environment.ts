@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  key: 'J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJBcGlLZXkiOiIyNTIxNTYiLCJWZXJzaW9uIjoiMSJ9.pPCapENz8Ddvq8VBMn7GyuXGsrdSFYoU7xMW9dlwh8A',
-  base_Url: 'https://api.backmerchants.bancoink.biz/qa',
+  base_Url: 'http://localhost:3000/api',
 };
 
 /*
