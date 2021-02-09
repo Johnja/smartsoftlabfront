@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-12 m-t-30">
+        <div class="card card-outline-inverse">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Búsqueda</h4>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Búsqueda de productos</h3>
+                <ng-container *ngIf="products">
+                    <app-table
+                    [headElements]= "headElements"
+                    [dataTable]= "products" 
+                       ></app-table>
+                </ng-container> 
+            </div>
+        </div>
+    </div>
+</div>
+

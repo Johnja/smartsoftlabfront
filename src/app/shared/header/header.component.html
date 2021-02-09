@@ -1,18 +1,71 @@
 <header class="topbar">
     <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <div class="navbar-header hide-menu-logo">
+            <a class="navbar-brand" href="#">
+                <b>
+                    <img src="../assets/images/assets.png" class="light-logo" alt="logo" />
+                </b>
+                <span style="color:#ffff">TEST JJMZ</span>
+            </a>
+        </div>
         <div class="navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark"
+                        href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark"
+                        href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
                 <li class="nav-item hidden-sm-down"></li>
             </ul>
             <ul class="navbar-nav my-lg-0">
-                <li class="nav-item hidden-xs-down"> 
-                    <a class="nav-link hidden-sm-down waves-effect waves-dark" (click)="logOut()">
-                        <i class="mdi mdi-logout"></i>
-                        <span>Cerrar Sesión
-                        </span>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bullhorn fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"><strong> 39</strong></span>
                     </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-color fa-envelope-o fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"><strong> 57</strong></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-commenting-o fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"><strong> 68</strong></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-comments fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"><strong> 15</strong></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-phone fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"><strong> 58</strong></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-mobile fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"><strong> 15</strong></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-settings fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user-o fa-lg" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu-nav fa-lg"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                        <ul class="dropdown-user">
+                            <li><a href="#"><i class="ti-user"></i> Mi Perfil</a></li>
+                            <li><a href="#"><i class="ti-settings"></i>Configuración cuenta</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a (click)="logOut()"><i class="fa fa-power-off"></i> Salir</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>

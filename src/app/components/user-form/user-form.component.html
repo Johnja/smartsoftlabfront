@@ -1,0 +1,42 @@
+<form [formGroup]="userForm" class="mt-4" (ngSubmit)="onCreate()">
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="id">ID:</label>
+        <input type="text" class="form-control" formControlName="id" id="id" placeholder="Ingresar ID..."
+          [ngClass]="{ 'is-invalid':f.id.errors }">
+        <div *ngIf="f.id.errors" class="invalid-feedback">
+          <div *ngIf="f.id.errors.required">ID es requerida!</div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name">Nombre:</label>
+        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Ingresar Nombre..."
+          [ngClass]="{ 'is-invalid':f.name.errors }">
+        <div *ngIf="f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name.errors.required">Nombre es requerido!</div>
+          <div *ngIf="f.name.errors.minLength">Nombre debe contener minímo {{minLength}} caracteres!</div>
+        </div>
+      </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Ingresar Email..."
+          [ngClass]="{ 'is-invalid':f.email.errors }">
+        <div *ngIf="f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">Email es requerido!</div>
+          <div *ngIf="f.email.errors.pattern">Email no valido!</div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="password">Contraseña: </label>
+        <input type="password" class="form-control" formControlName="password" id="password"
+          placeholder="Ingrese Password.." [ngClass]="{ 'is-invalid':f.password.errors }">
+        <div *ngIf="f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Password es requerido!</div>
+          <div *ngIf="f.password.errors.minLength">Password debe contener minímo {{minLength}} caracteres!</div>
+        </div>
+      </div>
+  </div>
+  <button class="btn btn-primary btn-lg btn-block" *ngIf="userForm.valid" type="submit">Guardar!</button>
+</form>

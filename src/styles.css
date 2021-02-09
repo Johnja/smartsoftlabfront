@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 .login-register {
   background-size: cover;
   background-repeat: no-repeat;
@@ -6,30 +7,43 @@
   height: 100%;
   width: 100%;
   padding: 10% 0;
-  position: fixed; }
+  position: fixed;
+  background: linear-gradient( -90deg, #000033, #32325b );
+  
+  margin-left: auto;
+  margin-right: auto;
+
+}
 
 .login-box {
-  width: 400px;
-  margin: 0 auto; }
-  .login-box .footer {
-    width: 100%;
-    left: 0px;
-    right: 0px; }
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-box .footer {
+  width: 100%;
+  left: 0px;
+  right: 0px;
+}
 
 .login-sidebar {
   padding: 0px;
-  margin-top: 0px; }
-  .login-sidebar .login-box {
-    right: 0px;
-    position: absolute;
-    height: 100%; }
+  margin-top: 0px;
+}
+
+.login-sidebar .login-box {
+  right: 0px;
+  position: absolute;
+  height: 100%;
+}
 
 /*******************
  Card title
 *******************/
-.card-title {
 
-  color: black;
+.card-title {
+  color: white;
   text-align: center;
   font-size: x-large;
   text-transform: uppercase;
@@ -37,7 +51,7 @@
 
 .card-text {
   margin-top: 20px;
-  color: black; 
+  color: white;
   text-align: justify;
 }
 
@@ -46,12 +60,11 @@
   color: black;
   text-align: right;
   margin-bottom: 15px;
-
 }
 
 .card-default .btn {
   align-items: center;
-  background:#7460ee; 
+  background: #7460ee;
   color: #ffffff;
 }
 
@@ -63,14 +76,133 @@
 .card-default {
   background: #ffffff;
   border-color: #7460ee;
-  border: 1px solid; 
+  border: 1px solid;
   margin-bottom: 30px;
   border-radius: 3px;
 }
 
 /*============================================================== 
+Icons
+ ============================================================== */
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-34 {
+  font-size: 34px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.text-sider {
+  color: #4682B4;
+}
+
+@media (max-width: 538px) {
+  .hide-menu-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 597px) {
+  .hide-menu-logo {
+    display: none
+  }
+}
+
+.sidebar-nav>ul>li {
+  margin: 0px 0px 0px 0px;
+  border-color: #32325b;
+  border-style: solid;
+  border-width: 1px;
+}
+
+*******************
+ Card title
+*******************/
+.card-inverse .card-bodyquote .blockquote-footer,
+.card-inverse .card-link,
+.card-inverse .card-subtitle,
+.card-inverse .card-text {
+  color: rgba(255, 255, 255, 0.65); }
+
+.card-default .card-header {
+  background: #ffffff;
+  border-bottom: 0px; }
+
+.card-success {
+  background: #06d79c;
+  border-color: #06d79c; }
+
+.card-danger {
+  background: #ef5350;
+  border-color: #ef5350; }
+
+.card-warning {
+  background: #ffb22b;
+  border-color: #ffb22b; }
+
+.card-info {
+  background: #398bf7;
+  border-color: #398bf7; }
+
+.card-primary {
+  background: #745af2;
+  border-color: #745af2; }
+
+.card-dark {
+  background: #2f3d4a;
+  border-color: #2f3d4a; }
+
+.card-megna {
+  background: #56c0d8;
+  border-color: #56c0d8; }
+
+/*============================================================== 
  Cards page
  ============================================================== */
+
+ /*******************
+Layouts
+******************/
+.card-no-border .card {
+  border: 0px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none; 
+  background: linear-gradient( -90deg, #32325b, #000033);
+  color: white
+  
+}
+
+.card-no-border .shadow-none {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.card-outline-danger,
+.card-outline-info,
+.card-outline-warning,
+.card-outline-success,
+.card-outline-primary {
+  background: #ffffff; }
+
+.card-fullscreen {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  overflow: auto; }
+
+
 .card-actions {
   float: right; }
   .card-actions a {
@@ -82,4 +214,29 @@
     .card-actions a:hover {
       opacity: 1; }
 
+.card-columns .card {
+  margin-bottom: 20px; }
 
+.collapsing {
+  -webkit-transition: height .08s ease;
+  -o-transition: height .08s ease;
+  transition: height .08s ease; }
+
+.card-outline-inverse {
+  border-color: #2f3d4a; }
+  .card-outline-inverse .card-header {
+    background-color: #004170;
+    border-color: #2f3d4a; }
+
+    .mat-tab-label .mat-tab-label-content {
+      color: white;
+      font-size: 16px
+    }
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: white;
+
+}
+
+.mat-input-underline {
+  color: white
+}

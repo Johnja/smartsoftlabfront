@@ -2,8 +2,8 @@
     <div class="scroll-sidebar">
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="nav-devider"></li>
-                <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                <li routerLinkActive="active"  *ngFor="let menuItem of menuItems"> 
+                    <a class="{{menuItem.class}}"    [routerLink]="menuItem.path" aria-expanded="false" routerLinkActiveOptions="{ exact: true }"><i class="{{menuItem.classFa}}" aria-hidden="true" style="color: #4682B4;"></i><span class="hide-menu text-sider pl-4">{{menuItem.title}}</span></a>   
                 </li>
             </ul>
         </nav>

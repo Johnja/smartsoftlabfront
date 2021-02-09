@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 //Services
-import { RestaurantService } from 'src/app/services/restaurant.service';
+import { ProductService } from 'src/app/services/product.service';
 
 //Models
-import { Restaurant } from '../../models/restaurant.model';
-
+import { User } from '../../models/user.model';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,9 +16,9 @@ export class DashboardComponent implements OnInit {
 
   
   /* declare restaurants variable */
-  restaurants: Restaurant[];
+  products: Product[];
 
-  constructor(private restaurantService: RestaurantService) { 
+  constructor(private productService: ProductService) { 
     
   }
 
@@ -26,8 +26,8 @@ export class DashboardComponent implements OnInit {
 
         /* fetch restaurants when app loads */
 
-      await  this.restaurantService.listRestaurants().subscribe((event:any) => {
-         this.restaurants = event.result;
+      await  this.productService.listProducts().subscribe((event:any) => {
+         this.products = event.result;
         });
   }
 

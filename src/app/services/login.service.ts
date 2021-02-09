@@ -24,7 +24,7 @@ export class LoginService {
   login(formData:  LoginForm) {
 
     //Metodo HTTP
-    console.log(formData);
+
     return this.http.post(`${base_Url}/login`, formData).pipe(
       tap((resp: any) => {
         localStorage.setItem('token', resp.token);

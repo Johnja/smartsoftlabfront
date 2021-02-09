@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-12 m-t-30">
+        <div class="card card-outline-inverse">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Administrar usuarios</h4>
+            </div>
+            <div class="card-body">
+                <mat-tab-group mat-align-tabs="start">
+                    <mat-tab label="Crear">
+                        <app-user-form
+                        (onItemAdded)="verifyChange($event)"
+                        (userFormFull)="onCreate($event)" >
+                    </app-user-form>
+                    </mat-tab>
+                    <mat-tab label="Actualizar">
+                        <app-filter
+                        (formID)="getUserUpdate($event)"
+                        ></app-filter>
+
+                        <ng-container *ngIf="user">
+                            <app-user-form
+                            [user]="user" 
+                            (onItemUpdate)="verifyChange($event)"
+                            (userFormFull)="update($event)" 
+                            ></app-user-form>
+                        </ng-container>
+
+                    </mat-tab>
+                    <mat-tab label="Borrar">
+                        <app-filter
+                        (formID)="getUserDelete($event)"
+                        ></app-filter>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+        <div class="card card-outline-inverse">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Listar usuarios</h4>
+            </div>
+            <div class="card-body">
+                <ng-container *ngIf="users">
+                    <app-table [headElements]="headElements" [dataTable]="users"></app-table>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

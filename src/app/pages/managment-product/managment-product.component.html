@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-12 m-t-30">
+        <div class="card card-outline-inverse">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Administrar productos</h4>
+            </div>
+            <div class="card-body" >
+                <mat-tab-group mat-align-tabs="start" >
+                    <mat-tab label="Crear">
+                        <app-product-form
+                        (onItemAdded)="verifyChange($event)"
+                        (productFormFull)="onCreate($event)" >
+                    </app-product-form>
+                    </mat-tab>
+                    <mat-tab label="Actualizar" >
+                        <app-filter
+                        (formID)="getProductUpdate($event)"
+                        ></app-filter>
+
+                        <ng-container *ngIf="product">
+                            <app-product-form
+                            [product]="product" 
+                            (onItemUpdate)="verifyChange($event)"
+                            (productFormFull)="update($event)" 
+                            ></app-product-form>
+                        </ng-container>
+
+                    </mat-tab>
+                    <mat-tab label="Borrar">
+                        <app-filter
+                        (formID)="getProductDelete($event)"
+                        ></app-filter>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+        <div class="card card-outline-inverse">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Listar productos</h4>
+            </div>
+            <div class="card-body">
+                <ng-container *ngIf="products">
+                    <app-table [headElements]="headElements" [dataTable]="products"></app-table>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
